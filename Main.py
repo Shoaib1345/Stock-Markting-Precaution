@@ -30,3 +30,13 @@ class LoginWindow:
             )
         """)
         self.conn.commit()
+
+        self.current_user = None
+        self.symbol_list = [
+            "BTCUSDT", "ETHUSDT", "BNBUSDT", "XRPUSDT", "ADAUSDT", "DOGEUSDT",
+            "SOLUSDT", "MATICUSDT", "DOTUSDT", "TRXUSDT", "LTCUSDT", "SHIBUSDT",
+            "AVAXUSDT", "BCHUSDT", "ETCUSDT", "LINKUSDT", "NEARUSDT"
+        ]
+
+        self.setup_database()
+        self.create_login_screen()
